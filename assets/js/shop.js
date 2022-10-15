@@ -113,3 +113,24 @@ document.getElementById("bestSellers").innerHTML = bestSellersHtml
 let shopItemsHtml = ''
 items.map(item => shopItemsHtml += (`<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 all ${item.type}"><div class="item"><a><img src="${item.thumbnail}" alt=""></a><h6>${item.title}</h6><p>${item.price} $</p><div href="#"  onclick="addItemToCart(${item.id})"  class="main-filled-button">Add to cart</div></div></div>`))
 document.getElementById("shopItems").innerHTML = shopItemsHtml
+
+let cartHtml = ''
+let cartCheckoutItems = JSON.parse(localStorage.getItem('cart'))
+const getCartItems = () => {
+  cartHtml = ''
+  cartCheckoutItems = JSON.parse(localStorage.getItem('cart'))
+  cartCheckoutItems.map(item => cartHtml += (`<li class="list-group-item">${item.title} : ${item.size}kg ${item.price}$</li>`))
+  document.getElementById("cartitemscheckout").innerHTML = cartHtml
+}
+
+const sendEmail = () => {
+  console.warn(document.getElementById("contactName").value)
+ 
+}
+
+document.addEventListener('DOMContentLoaded', (event) => {
+  document.getElementById("thecontact").addEventListener("submit", function(e) {
+      e.preventDefault() // Cancel the default action
+      sendEmail();
+  });
+})
