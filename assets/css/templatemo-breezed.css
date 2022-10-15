@@ -166,6 +166,28 @@ a.main-stroked-button:hover {
   color: #5fb759;
 }
 
+div.main-stroked-button {
+  margin-top: 8px;
+  font-size: 13px;
+  border-radius: 25px;
+  padding: 11px 25px;
+  background-color: transparent;
+  border: 2px solid #fff;
+  text-transform: uppercase;
+  color: #fff;
+  font-weight: 600;
+  letter-spacing: 1px;
+  -webkit-transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+div.main-stroked-button:hover {
+  background-color: #fff;
+  color: #5fb759;
+}
+
 a.main-filled-button {
   font-size: 13px;
   border-radius: 25px;
@@ -186,6 +208,26 @@ a.main-filled-button:hover {
   background-color: #5fb759;
 }
 
+div.main-filled-button {
+  margin-top: 8px;
+  font-size: 13px;
+  border-radius: 25px;
+  padding: 13px 25px;
+  background-color: #fff;
+  text-transform: uppercase;
+  color: #5fb759;
+  font-weight: 600;
+  letter-spacing: 1px;
+  -webkit-transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+div.main-filled-button:hover {
+  color: #fff;
+  background-color: #5fb759;
+}
 a.main-button-icon {
   font-size: 13px;
   border-radius: 25px;
@@ -263,6 +305,27 @@ button.main-button-icon i {
 
 button.main-button-icon:hover i {
   padding-left: 5px;
+}
+
+button.secendary-button-icon {
+  font-size: 13px;
+  border-radius: 25px;
+  padding: 11px 25px;
+  background-color: transparent;
+  border: 2px solid #5fb759;
+  text-transform: uppercase;
+  color: #5fb759;
+  font-weight: 600;
+  letter-spacing: 1px;
+  -webkit-transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+button.secendary-button-icon:hover {
+  background-color: #5fb759;
+  color: #fff;
 }
 
 a.text-button-icon {

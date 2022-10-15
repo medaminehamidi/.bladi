@@ -170,14 +170,14 @@
         <div class="cartTrigger" data-bs-toggle="modal" data-bs-target="#exampleModal">
             <i class="fa fa-shopping-cart"></i>
         </div>
-    </ul>   
+    </ul>
 
     <!-- Modal -->
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-body">
-                    <i class="fa fa-shopping-cart"></i>
+                    <h5> Shopping Cart</h5>
                 </div>
                 <ul class="list-group">
                     <li class="list-group-item">An item</li>
@@ -185,10 +185,49 @@
                     <li class="list-group-item">A third item</li>
                     <li class="list-group-item">A fourth item</li>
                     <li class="list-group-item">And a fifth one</li>
-                  </ul>
+                </ul>
+                <div class="col-lg-12 col-md-12 col-xs-12">
+                    <div class="contact-form">
+                        <form id="contact" action="" method="get">
+                            <div class="row">
+                                <div class="col-md-6 col-sm-12">
+                                    <fieldset>
+                                        <input name="name" type="text" id="name" placeholder="Your Name *" required="">
+                                    </fieldset>
+                                </div>
+                                <div class="col-md-6 col-sm-12">
+                                    <fieldset>
+                                        <input name="phone" type="text" id="phone" placeholder="Your Phone" required="">
+                                    </fieldset>
+                                </div>
+                                <div class="col-md-6 col-sm-12">
+                                    <fieldset>
+                                        <input name="email" type="email" id="email" placeholder="Your Email *"
+                                            required="">
+                                    </fieldset>
+                                </div>
+                                <div class="col-md-6 col-sm-12">
+                                    <fieldset>
+                                        <input name="subject" type="text" id="subject" placeholder="Subject">
+                                    </fieldset>
+                                </div>
+                                <div class="col-lg-12">
+                                    <fieldset>
+                                        <textarea name="message" rows="6" id="message" placeholder="Message"
+                                            required=""></textarea>
+                                    </fieldset>
+                                </div>
+
+                            </div>
+                        </form>
+                    </div>
+                </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">contunue shopping</button>
-                    <button type="button" class="btn btn-primary">Go to checkout</button>
+                    <button type="button" class="secendary-button-icon" data-bs-dismiss="modal">Contunue
+                        Shopping</button>
+                    <button type="submit" id="form-submit" class="main-button-icon">Order Now
+                        <i class="fa fa-arrow-right"></i>
+                    </button>
                 </div>
             </div>
         </div>
@@ -215,20 +254,14 @@
                 </div>
                 <div class="col-lg-9">
                     <div class="filters-content">
-                        <div class="row grid">
-                            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 all des">
-                                <div class="item">
-                                    <a><img src="assets/images/project-item-01.jpg" alt=""></a>
-                                    
-                                    <h6>Snow Honey</h6>
-                                    <p>19.20 $</p>
-                                </div>
-                            </div>
+                        <div class="row grid" id="shopItems">
+                            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 all des"><div class="item"><a><img src="assets/images/project-item-01.jpg" alt=""></a><h6>Snow Honey</h6><p>19.20 $</p><div href="#" class="main-filled-button">Add to cart</div></div></div>
                             <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 all dev">
                                 <div class="item">
                                     <a><img src="assets/images/project-item-02.jpg" alt=""></a>
                                     <h6>Snow Honey</h6>
                                     <p>19.20 $</p>
+                                    <div href="#" class="main-filled-button">Add to cart</div>
                                 </div>
                             </div>
                             <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 all gra">
@@ -236,6 +269,7 @@
                                     <a><img src="assets/images/project-item-03.jpg" alt=""></a>
                                     <h6>Snow Honey</h6>
                                     <p>19.20 $</p>
+                                    <div href="#" class="main-filled-button">Add to cart</div>
                                 </div>
                             </div>
                             <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 all tsh">
@@ -243,6 +277,7 @@
                                     <a><img src="assets/images/project-item-04.jpg" alt=""></a>
                                     <h6>Snow Honey</h6>
                                     <p>19.20 $</p>
+                                    <div href="#" class="main-filled-button">Add to cart</div>
                                 </div>
                             </div>
                             <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 all dev">
@@ -250,6 +285,7 @@
                                     <a><img src="assets/images/project-item-05.jpg" alt=""></a>
                                     <h6>Snow Honey</h6>
                                     <p>19.20 $</p>
+                                    <div href="#" class="main-filled-button">Add to cart</div>
                                 </div>
                             </div>
                             <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 all des">
@@ -257,6 +293,7 @@
                                     <a><img src="assets/images/project-item-06.jpg" alt=""></a>
                                     <h6>Snow Honey</h6>
                                     <p>19.20 $</p>
+                                    <div href="#" class="main-filled-button">Add to cart</div>
                                 </div>
                             </div>
                         </div>
@@ -278,13 +315,15 @@
                 </div>
                 <div class="col-lg-12 col-md-12 col-sm-12 mobile-bottom-fix-big"
                     data-scroll-reveal="enter left move 30px over 0.6s after 0.4s">
-                    <div class="owl-carousel owl-theme">
+                    <div class="owl-carousel owl-theme" id="bestSellers">
                         <div class="item author-item">
                             <div class="member-thumb">
                                 <img src="assets/images/member-item-01.jpg" alt="">
                             </div>
                             <h4>.01 White Honey</h4>
                             <span>19.20 $</span>
+
+                        <div href="#" class="main-stroked-button">Add to cart</div>
                         </div>
                         <div class="item author-item">
                             <div class="member-thumb">
@@ -292,6 +331,8 @@
                             </div>
                             <h4>.02 Snow Honey</h4>
                             <span>19.20 $</span>
+
+                        <div href="#" class="main-stroked-button">Add to cart</div>
                         </div>
                         <div class="item author-item">
                             <div class="member-thumb">
@@ -299,6 +340,8 @@
                             </div>
                             <h4>.03 Johnny Honey</h4>
                             <span>19.20 $</span>
+
+                        <div href="#" class="main-stroked-button">Add to cart</div>
                         </div>
                         <div class="item author-item">
                             <div class="member-thumb">
@@ -306,6 +349,8 @@
                             </div>
                             <h4>.04 Catherine Honey</h4>
                             <span>19.20 $</span>
+
+                        <div href="#" class="main-stroked-button">Add to cart</div>
                         </div>
                         <div class="item author-item">
                             <div class="member-thumb">
@@ -313,6 +358,8 @@
                             </div>
                             <h4>.05 Shao Honey</h4>
                             <span>19.20 $</span>
+
+                        <div href="#" class="main-stroked-button">Add to cart</div>
                         </div>
 
                         <div class="item author-item">
@@ -321,15 +368,11 @@
                             </div>
                             <h4>.06 Emma Honey</h4>
                             <span>19.20 $</span>
+
+                        <div href="#" class="main-stroked-button">Add to cart</div>
                         </div>
 
-                        <div class="item author-item">
-                            <div class="member-thumb">
-                                <img src="assets/images/member-item-06.jpg" alt="">
-                            </div>
-                            <h4>.07 Oliva Honey</h4>
-                            <span>19.20 $</span>
-                        </div>
+                        <div class="item author-item"><div class="member-thumb"> <img src="assets/images/member-item-06.jpg" alt=""></div><h4>.07 Oliva Honey</h4><span>19.20 $</span> <div href="#" class="main-stroked-button">Add to cart</div></div>
 
                     </div>
                 </div>
@@ -453,6 +496,7 @@
     <script src="assets/js/slick.js"></script>
     <script src="assets/js/lightbox.js"></script>
     <script src="assets/js/isotope.js"></script>
+    <script src="assets/js/shop.js"></script>
 
     <!-- Global Init -->
     <script src="assets/js/custom.js"></script>
