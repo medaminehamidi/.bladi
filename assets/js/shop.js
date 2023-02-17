@@ -107,11 +107,13 @@ const bestSellers = [
   },
 ]
 let bestSellersHtml = ''
-bestSellers.map(item => bestSellersHtml += (`<div class="item author-item"><div class="member-thumb"> <img src="${item.thumbnail}" alt=""></div><h4>${item.title}</h4><span>${item.price} $</span> <div href="#" onclick="addBestSellersToCart(${item.id})"  class="main-stroked-button">Add to cart</div></div>`))
+// button <div href="#" onclick="addBestSellersToCart(${item.id})"  class="main-stroked-button">Add to cart</div>
+bestSellers.map(item => bestSellersHtml += (`<div class="item author-item"><div class="member-thumb"> <img src="${item.thumbnail}" alt=""></div><h4>${item.title}</h4><span>${item.price} $</span></div>`))
 document.getElementById("bestSellers").innerHTML = bestSellersHtml
 
 let shopItemsHtml = ''
-items.map(item => shopItemsHtml += (`<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 all ${item.type}"><div class="item"><a><img src="${item.thumbnail}" alt=""></a><h6>${item.title}</h6><p>${item.price} $</p><div href="#"  onclick="addItemToCart(${item.id})"  class="main-filled-button">Add to cart</div></div></div>`))
+// button <div href="#"  onclick="addItemToCart(${item.id})"  class="main-filled-button">Add to cart</div>
+items.map(item => shopItemsHtml += (`<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 all ${item.type}"><div class="item"><a><img src="${item.thumbnail}" alt=""></a><h6>${item.title}</h6><p>${item.price} $</p></div></div>`))
 document.getElementById("shopItems").innerHTML = shopItemsHtml
 
 let cartHtml = ''
